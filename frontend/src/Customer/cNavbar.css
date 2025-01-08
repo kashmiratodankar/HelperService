@@ -1,0 +1,273 @@
+/* General */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f8f9fa;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #007bff;
+    color: white;
+}
+
+.navbar .logo a {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: white;
+    font-weight: bold;
+}
+
+.navbar .search input {
+    padding: 8px;
+    width: 200px;
+    margin-right: 10px;
+}
+
+.navbar .search button {
+    padding: 8px 15px;
+    border: none;
+    background: white;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.navbar .nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Automatic Slider */
+.auto-slider {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+    overflow: hidden;
+}
+
+.auto-slider .slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+    transition: opacity 1s ease-in-out; /* Smooth transition between images */
+}
+
+/* Ensure images are fit properly */
+.auto-slider .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes fade {
+    0% { opacity: 1; }
+    33% { opacity: 1; }
+    34% { opacity: 0; }
+    66% { opacity: 1; }
+}
+
+/* Card Slider */
+.card-slider {
+    display: flex;
+    justify-content: flex-start; /* Align cards horizontally */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    gap: 20px; /* Space between cards */
+    padding: 20px;
+    background: #f1f1f1;
+    scroll-behavior: smooth; /* Smooth scrolling effect */
+}
+
+.card-slider .card {
+    flex: 0 0 300px; /* Fixed width for cards */
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.5s ease-in-out; /* Smooth transform effect */
+}
+.card-slider {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slight zoom-in effect */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Add shadow for better emphasis */
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease; /* Smooth zoom-in on the image */
+}
+
+.card:hover .card-image {
+    transform: scale(1.1); /* Zoom in the image slightly */
+}
+
+.card-content {
+    padding: 15px;
+    background-color: #fff;
+}
+
+.card-slider .card img {
+    width: 80%; /* Full width of the card */
+    height: 150px; /* Fixed height for consistent card size */
+    object-fit: cover; /* Ensure the image covers the space without stretching */
+    border-radius: 8px;
+}
+
+/* Card Slider Button */
+.card-slider .card .button {
+    margin-top: 10px;
+    display: inline-block; /* Button stays inline */
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.card-slider .card .button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+    transition: 0.3s ease;
+}
+
+/* Horizontal Scrolling Styling */
+.card-slider::-webkit-scrollbar {
+    height: 8px; /* Height of the horizontal scrollbar */
+}
+
+.card-slider::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+.card-slider::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+}
+
+/* Card Slider Button */
+.card-slider .card .button {
+    margin-top: 10px;
+    display: inline-block; /* inline block to flex */
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.card-slider .card .button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+    transition: 0.3s ease;
+}
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  
+  .profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .profile-info {
+    text-align: center;
+  }
+  
+  .profile-info h2 {
+    margin-bottom: 10px;
+  }
+  
+  .profile-info p {
+    margin-bottom: 10px;
+  }
+
+  /* Footer Styling */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer p {
+    margin: 10px 0;
+}
+
+.footer .footer-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer .footer-links li {
+    display: inline;
+}
+
+.footer .footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer .footer-links a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,79 @@
+/* HomePage.css */
+.home-container {
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+.header {
+    background-color: #0056b3; /* Darker blue */
+    color: white;
+    padding: 50px 0;
+}
+
+/* Information Section */
+.info-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between cards */
+    margin: 40px 0;
+}
+
+.info-card {
+    border: 1px solid #aaa; /* Subtle border contrast */
+    background-color: #d1e7ff; /* Soft light blue */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Slightly darker shadow */
+    display: flex;
+    flex-direction: column; /* Arrange content vertically */
+    justify-content: space-between; /* Evenly space content */
+    align-items: center; /* Center align content */
+    box-sizing: border-box; /* Include padding in size calculation */
+    min-height: 250px; /* Ensure a minimum height for consistency */
+}
+
+/* Adjust height based on tallest content */
+.info-section > .info-card {
+    height: 100%; /* Match the height of the tallest card */
+}
+
+/* Headings */
+h2 {
+    color: #004085; /* Navy blue for headings */
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Buttons */
+.btn {
+    background-color: #004085; /* Dark navy button color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #002752; /* Darker navy blue on hover */
+}
+
+/* Footer */
+.footer {
+    margin-top: 50px;
+    font-size: 14px;
+    color: gray;
+}
+
+/* Media Query for Mobile View */
+@media (max-width: 768px) {
+    .info-section {
+        grid-template-columns: 1fr; /* Single column layout for mobile */
+    }
+}

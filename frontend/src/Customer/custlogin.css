@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Better box sizing */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #eaf4fc; /* Soft blue background for calmness */
+}
+
+p{
+    text-align: center;
+}
+
+#rev{
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin-bottom: 50px;
+    text-align: center;
+    color: #204d86; /* Dark blue for headers to convey trust */
+}
+
+#culogin {
+    background-color: white;
+    padding: 40px;
+    border: 2px solid #d0d8e0; /* Light blue-gray for subtle contrast */
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px; /* Slightly rounded corners for a modern look */
+    width: 400px; /* Slightly wider form for better readability */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+}
+
+#culogin input {
+    width: 100%; /* Full width input */
+    padding: 12px;
+    margin: 10px 0; /* Equal margin for inputs */
+    border: 1px solid #d0d8e0;
+    border-radius: 6px; /* Slightly rounded for consistency */
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#culogin input:focus {
+    border-color: #4682b4; /* Steel blue focus border */
+    box-shadow: 0 0 8px rgba(70, 130, 180, 0.5); /* Blue glow */
+    outline: none;
+}
+
+#clsubmit {
+    width: 100%; /* Make the button fill the width */
+    padding: 12px;
+    background-color: #204d86; /* Primary blue button */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#clsubmit:hover {
+    background-color: #153a64; /* Darker blue on hover */
+    transform: translateY(-2px);
+}
+
+#clsubmit:active {
+    transform: translateY(0px);
+}
