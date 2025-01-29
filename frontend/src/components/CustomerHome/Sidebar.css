@@ -1,0 +1,112 @@
+/* Basic styling for body and main content */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the page takes full height */
+}
+
+.main-content {
+  margin-left: 260px; /* Space for the sidebar */
+  padding: 20px;
+  flex: 1; /* Allow content to grow and fill the space */
+}
+
+/* Sidebar styles */
+.sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  padding-top: 90px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  overflow-y: auto; /* Scrollable for large content */
+}
+
+.sidebar h2 {
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 15px;
+}
+
+.sidebar ul li label {
+  display: block;
+  font-size: 16px;
+  color: #ddd;
+  margin-bottom: 5px;
+}
+
+.sidebar ul li input[type="text"],
+.sidebar ul li select,
+.sidebar ul li input[type="range"] {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.sidebar ul li input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.sidebar ul li input[type="text"]:focus,
+.sidebar ul li select:focus {
+  outline: none;
+  border: 1px solid #555;
+}
+
+/* Hover effects */
+.sidebar ul li a:hover {
+  background-color: #575757;
+  color: white;
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    box-shadow: none;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .sidebar ul li {
+    text-align: left;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sidebar ul li label {
+    font-size: 14px;
+  }
+
+  .sidebar ul li input[type="text"],
+  .sidebar ul li select,
+  .sidebar ul li input[type="range"] {
+    padding: 6px;
+    font-size: 14px;
+  }
+}
+

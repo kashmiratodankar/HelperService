@@ -1,0 +1,705 @@
+/* Home.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px; /* Adjust based on your navbar's height */
+    background-color: #fff; /* Example background color */
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  
+.homeimg{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.homeimg img{
+    width: 100vw;
+    height: 80vh;
+}
+
+.homeimg h1{
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.homeimg button{
+    position: absolute;
+    padding: 15px;
+    border-radius: 10px;
+    border: solid 1px #fff;
+    background-color: #005f6b;
+    color: #fff;
+    font-size: medium;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.homeimg button:hover{
+    transform: scale(1.1);
+}
+
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #333;
+    padding: 20px 20px;
+    margin: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Keep navbar at the top */
+    width: 100%; /* Ensure it spans the full width */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Keep navbar above other content */
+}
+.HomeLogo {
+    width: 100px;
+    height: 50px;
+    transition: transform 0.3s ease;
+    display: flex;
+    justify-content: flex-start; /* Align logo to the left */
+    flex: 1;
+}
+
+.HomeLogo:hover {
+    transform: scale(1.1);
+}
+
+.navleft {
+    display: flex;
+    align-items: center;
+    margin-right: auto; /* Push rightnav items to the right */
+}
+
+/* Search Bar Styles */
+.search {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 5px 15px;
+    width: 40vw;
+    border-radius: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-grow: 3; /* Allow the search bar to expand */
+    max-width: 500px; /* Limit the maximum width */
+    margin: 0 90px; /* Add space on left and right */
+     /* Distribute content evenly */
+}
+
+.search input {
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    width: 600px;
+}
+
+.search button {
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 6px 12px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search button:hover {
+    background-color: #005f6b;
+}
+
+/* Right Navbar Links */
+.rightnav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 100px;
+}
+
+.rightnav a {
+    color: #d8d2d2;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.rightnav a:hover {
+    background-color: #474545;
+    color: #fff;
+}
+
+/* Profile Section */
+.profile {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.profilePic {
+    background-color: #333;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.profilePic:hover {
+    transform: scale(1.1);
+    background-color: #474545;
+}
+
+
+.navclose{
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 0;
+    display: none; /* disappear */
+}
+
+.searchclose{
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 0;
+    display: none; /* disappear */
+}
+
+.menulist{
+    display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 10px;
+        flex-wrap: wrap; /* Allow wrapping for better alignment */
+    }
+
+    .navleft {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        width: auto;
+    }
+
+    .HomeLogo {
+        width: 70px; /* Adjust logo size for smaller screens */
+        height: 40px;
+    }
+
+    .search {
+        display: none; /* Hide search bar on smaller screens */
+    }
+
+    .rightnav {
+        position: fixed;
+        top: -100%; /* Initially hidden */
+        left: 0;
+        width: 100%;
+        background-color: #474545;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+        gap: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        transition: top 0.4s ease;
+        z-index: 1000;
+    }
+
+    .rightnav.show {
+        top: 1px; /* Align the menu just below the navbar */
+    }
+
+    .navitem {
+        color: #fff;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .menulist {
+        display: flex; /* Display menu icon */
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .profile {
+        margin-left: auto; /* Push profile to the far end */
+    }
+
+    .navclose {
+        display: none;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: transparent;
+        font-size: 1.5rem;
+        color: #fff;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    .navclose.show {
+        display: block; /* Show close icon when menu is open */
+    }
+}
+
+
+.home-cards {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+    gap: 20px; /* Add spacing between cards */
+    padding: 20px;
+}
+
+.home-cards .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+    justify-content: space-between;
+    text-align: center;
+    background-color: #fff;
+    /* box-shadow: 5px 6px 7px 0 #878484; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+    width: 300px; /* Adjust width for consistent card size */
+    padding: 20px;
+    background-color: #f5f1f1;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.home-cards .card:hover {
+    transform: scale(1.05);
+}
+
+.home-section .card-title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card img {
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.card-title{
+    margin-top: 20px;
+}
+
+.req-section{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    background-color: rgb(223, 235, 237);
+}
+.req-img .img{
+    width: 600px;
+    height: 500px;
+    border-radius: 20px;
+    margin: 30px;
+}
+.req-button{
+    align-self: center;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 30px 10px 30px;
+}
+.req-para p{
+    text-align: center;
+    margin: 0 80px 0 80px;
+    font-weight: 500;
+}
+.req-button-para{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.req-para button{
+    display: inline-block;
+    background-color: #1d4ed8;
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.req-para button:hover{
+    background-color: #2563eb;
+    transform: scale(1.1);
+}
+.req-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0 30px 90px;
+}
+
+
+.req-list ul li {
+    margin-bottom: 10px; /* Adds spacing between list items */
+    font-size: x-large;
+    color: #191a1c;
+    font-weight: 800;
+    font-size: 16px;
+    display: flex; /* Aligns bullet and text horizontally */
+    align-items: center;
+}
+
+.req-list ul li::before {
+    content: "•"; /* Adds custom bullet */
+    font-weight: 600; /* Makes the bullet bold */
+    font-size: 18px; /* Slightly larger bullet size */
+    color: #333; /* Bullet color */
+    margin-right: 8px; /* Space between bullet and text */
+}
+
+
+
+.card-title h3{
+    margin-top: 10px;
+    font-size: x-large;
+    color: #191a1c;
+    font-weight: 800;
+    text-align: center;
+    width: 100%;
+}
+
+    /* background-color: #005f6b; */
+    .card button {
+        display: inline-block;
+        background-color: #1d4ed8;
+        color: white;
+        font-size: 0.875rem;
+        font-weight: 600;
+        padding: 10px 16px;
+        border: none;
+        border-radius: 8px;
+        text-align: center;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+.card button .card-link{
+    padding: 10px 100px 10px 100px;
+    text-decoration: none;
+    color: #fff;
+}
+    .card button:hover {
+    /* background-color: #007b8a; */
+    background-color: #2563eb;
+    transform: scale(1.1);
+    }
+
+    .card-pagination{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+      .card-pagination a{
+        margin: 0;
+        width: 98vw;
+        font-weight: 600;
+        text-decoration: none;
+        color: #1d4ed8;
+        transition: color 0.3s;
+      }
+      .card-title h3{
+        font-weight: 800;
+        padding: 10px;
+        margin: 10px;
+        text-align: center;
+      }
+
+      .card-pagination .forward-arrow{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 60px;
+        padding: 0;
+        margin-right: 20px;
+      }
+
+      .card-pagination .backward-arrow{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 120px;
+        margin-left: 20px;
+        padding: 0;
+      }
+
+      .backward-arrow img {
+        transform: rotate(180deg);
+    }
+    
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Section Heading Styling */
+.home-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #007b8a;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* Why Helper Service Section */
+.home-section + div {
+    padding: 40px 20px;
+    background-color: #eef7f8;
+    text-align: center;
+}
+
+.home-section + div img {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.home-section + div p {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 10px auto;
+    max-width: 800px;
+    line-height: 1.8;
+}
+
+/* Footer Styling */
+
+.footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25%;
+    background-color: #333; /* Example background color */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    z-index: 999; /* Ensure it stays above other content */
+}
+
+
+.footer a {
+    color: #007b8a;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer-links{
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer a:hover {
+    color: #00a0c3;
+}
+
+.footer-content p{
+    margin-bottom: 10px;
+}
+
+/* Buttons (General Styling) */
+button {
+    transition: box-shadow 0.3s ease;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px #007b8a;
+}
+
+/* Cards: Add Animation for Loading */
+.home-cards .card {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Accessibility: Hover Effects for Accessibility */
+.card img:hover {
+    opacity: 0.9;
+    filter: grayscale(20%);
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    /* color: #007b8a; */
+    color: #2563eb;
+    margin: 10px 0;
+}
+
+/* Mobile Responsiveness Improvements */
+@media screen and (max-width: 1028px) {
+    .homeimg img{
+        width: 100vw;
+        height: 50vh;
+    }
+
+    .homeimg h1 {
+        font-size: 1.8rem;
+    }
+
+    .home-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+
+    }
+
+    .home-cards .card {
+        max-width: auto;
+    }
+
+
+    .homeimg button{
+        margin: auto;
+        padding: auto;
+        width: auto;
+    }
+    .navbar {
+        flex-wrap: wrap;
+    }
+    .req-list ul{
+        margin: 30px 30px 40px 90px;
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    .search {
+        display: flex; /* Ensure visibility */
+        align-items: center;
+        justify-content: space-between;
+        width: 50%;
+    }
+
+    .search input {
+        width: 60%; /* Adjust input width */
+        font-size: 12px; /* Reduce font size for smaller screens */
+    }
+
+    .search button {
+        padding: 5px 10px; /* Reduce button padding */
+        font-size: 12px; /* Adjust button text size */
+    }
+    .footer-links{
+        display: flex;
+        row-gap: 1rem;
+        flex-direction: column;
+    }
+    .home-cards {
+        gap: 15px;
+    }
+
+    .home-cards .card {
+        width: auto;
+    }
+
+    .home-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .req-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    .req-img .img{
+        width: 250px;        
+        height: 150px;
+        margin-bottom: 30px;
+        position: relative;
+    }
+    .card-title h3{
+        font-size: larger;
+        text-align: center;
+    }
+    .req-para p {
+        margin: 0 20px 0 20px;
+        font-weight: 400;
+        font-size: 14px;
+        text-align: center;
+    }
+    .req-list{
+        margin: 0 10px 10px 90px;
+    }
+    .req-list ul li{
+        font-weight: 600;
+        font-size: 13px;
+        margin: 5px;
+    }
+    .req-list ul{
+        margin: 5px;
+    }
+    .req-para button{
+        width: 180px;
+        padding: 14px;
+    }
+    .req-button{
+        padding: 5px;
+        margin: 7px;
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+}
+
+
+

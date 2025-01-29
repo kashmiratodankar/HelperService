@@ -1,0 +1,144 @@
+/* CustomerLogin Component Styling */
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #163a7d;
+    padding: 20px;
+    box-sizing: border-box;
+    animation: fadeIn 1.2s ease-in-out;
+  }
+  
+  .login-box {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: slideInFromBottom 1s ease-out;
+  }
+  
+  h2 {
+    font-size: 24px;
+    color: #004085;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  .textbox {
+    margin-bottom: 20px;
+    text-align: left;
+    position: relative;
+    
+  }
+  
+  .textbox input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+    
+  }
+  
+  .textbox input:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 5px rgba(0, 87, 179, 0.5);
+    background-color: #ffffff;
+  }
+  
+  .textbox input::placeholder {
+    color: #aaa;
+  }
+  
+  /* Hover Effect for Input Fields */
+  .textbox input:hover {
+    border-color: #0056b3;
+    background-color: #ffffff;
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+  }
+  
+  /* Login Button */
+  .btn-login {
+    width: 100%;
+    padding: 12px;
+    background-color: #0056b3;
+    color: #ffffff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 0.4s forwards;
+    
+  }
+  
+  /* Hover Effect for Login Button */
+  .btn-login:hover {
+    background-color: #003366;
+    transform: translateY(-3px);
+  }
+  
+  /* Active State for Login Button */
+  .btn-login:active {
+    transform: translateY(1px);
+  }
+  
+  /* Keyframe Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInFromBottom {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Add responsiveness */
+  @media (max-width: 768px) {
+    .login-box {
+      padding: 20px;
+    }
+  
+    h2 {
+      font-size: 20px;
+    }
+  }
+
